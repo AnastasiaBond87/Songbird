@@ -1,0 +1,170 @@
+.gallery {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.gallery-player {
+  padding: 20px;
+  background: $color-medium-grey;
+  border-radius: 3px;
+  margin: 0 0 30px 0;
+  position: sticky;
+  top: 0;
+
+  &__bird-name {
+    font-size: 20px;
+    color: $color-light-green;
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background: $color-light-grey;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+  }
+
+  &__play-btn {}
+
+  &__timeline {
+    height: 6px;
+    flex: 0 1 500px;
+    background: $color-light-grey;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__progress {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: $color-green;
+    transition: all 0.5s ease;
+  }
+
+  &__time {
+    position: absolute;
+    bottom: -15px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    cursor: default;
+    color: $color-light-grey;
+    font-size: 11px;
+  }
+
+  &__volume {
+    display: flex;
+    align-items: center;
+  }
+
+  &__mute {
+    color: $color-green;
+    padding: 6px;
+    margin: 0 15px 0 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-light-green;
+    }
+  }
+
+  &__volume-slider {
+    height: 4px;
+    flex: 0 1 100px;
+    background: $color-light-grey;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__volume-percentage {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    border-radius: inherit;
+    width: 50%;
+    background: $color-green;
+  }
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  @media(max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid $color-green;
+
+    @media(max-width: 500px) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    min-width: 120px;
+    width: 120px;
+    border-radius: 5px;
+    height: 120px;
+    object-fit: cover;
+    margin: 0 10px 0 0;
+
+    @media(max-width: 500px) {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: 500px) {
+      align-items: center;
+    }
+  }
+
+  &__player {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+  }
+
+  &__play-btn {
+    padding: 1px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-white;
+  }
+
+  &__description {
+    color: $color-light-grey;
+  }
+}

@@ -1,0 +1,17 @@
+.play-btn {
+  color: $color-green;
+  text-align: center;
+  padding: 3px;
+  border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: $color-green;
+  margin: 0 15px 0 0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: $color-light-green;
+    border-color: $color-light-green;
+  }
+}

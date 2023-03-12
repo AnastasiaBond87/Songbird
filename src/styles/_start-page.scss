@@ -1,0 +1,72 @@
+.start-page {
+  &.start-page-active {
+    display: block;
+  }
+
+  &__wrapper {
+    border-radius: 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8)), url("./assets/img/toucan-bg-small.jpg") center/cover no-repeat;
+    margin: 0 auto;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media(max-width: 430px) {
+      padding: 30px;
+    }
+  }
+
+  &__title {
+    white-space: pre-wrap;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0 0 20px 0;
+  }
+
+  &__rules {
+    margin: 0 0 60px 0;
+  }
+
+
+  &__btn {
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: $color-green;
+    color: $color-white;
+    transition: all 0.5s ease;
+
+    &:hover,
+    &:active {
+      background: $color-light-green;
+      color: $color-black;
+    }
+  }
+}
+
+.rules {
+  &__item {
+    font-size: 14px;
+    line-height: 16px;
+    position: relative;
+    padding: 0 0 0 10px;
+    margin: 0 0 10px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      top: 8px;
+      transform: translateY(-50%);
+      border-radius: 50px;
+      background: $color-green;
+    }
+  }
+}
